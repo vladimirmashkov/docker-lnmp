@@ -12,3 +12,15 @@ services:
     ports:
       - "80:80"
       - "443:443"
+  mysql:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+    # NOTE: your data will be stored in ./mysql
+      - ./mysql:/var/lib/mysql
+    
