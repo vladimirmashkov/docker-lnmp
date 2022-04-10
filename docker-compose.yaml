@@ -8,6 +8,7 @@ services:
       # - ./nginx:/usr/share/nginx/html
       # - ./nginx:/temporary
       - ./nginx:/etc/nginx
+      - /etc/resolv.conf:/etc/resolv.conf
       - /opt/cache/:/opt/cache/
     ports:
       - "80:80"
