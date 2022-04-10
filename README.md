@@ -6,6 +6,9 @@ git fetch --all && git reset --hard origin/main && docker-compose up -d
 docker-compose down && git fetch --all && git reset --hard origin/main && docker-compose up -d
 
 clear && docker exec -it nginx error_log  /var/log/nginx/nginx_error.log  warn;
+clear && docker exec -it nginx grep datadir /etc/my.cnf
+
+clear && docker exec -it mysql 
 ```
 
 ```shell
