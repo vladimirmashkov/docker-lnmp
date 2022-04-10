@@ -6,7 +6,8 @@ services:
     container_name: nginx
     volumes:
       # - ./nginx:/usr/share/nginx/html
-      - ./nginx:/temporary
+      # - ./nginx:/temporary
+      - ./nginx:/etc/nginx
     ports:
       - "80:80"
       - "443:443"
