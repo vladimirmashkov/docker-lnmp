@@ -4,10 +4,9 @@ services:
     image: nginx:latest
     restart: always
     container_name: nginx
-    # volumes:
+    volumes:
       # - ./nginx:/usr/share/nginx/html
-      # - ./nginx:/
+      - ./nginx:/temporary
     ports:
       - "80:80"
       - "443:443"
-      
