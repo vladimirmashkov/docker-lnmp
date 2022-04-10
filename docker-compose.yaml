@@ -1,11 +1,10 @@
 version: '3'
-services:
-  nginx:
-    image: nginx
-    # volumes:
-      # - ./nginx:/usr/share/nginx/html
-      # - ./nginx:/
-    ports:
-      - "80:80"
-      - "443:443"
-    restart: always
+nginx:
+  image: nginx:latest
+  # volumes:
+    # - ./nginx:/usr/share/nginx/html
+    # - ./nginx:/
+  ports:
+    - "80:80"
+    - "443:443"
+  restart: always
