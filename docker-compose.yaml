@@ -5,11 +5,10 @@ services:
     restart: always
     container_name: nginx
     volumes:
-      - ./nginx:/etc/nginx
-      # - /etc/resolv.conf:/etc/resolv.conf
-      # - /etc/hosts:/etc/hosts
+      - ./nginx/etc/nginx:/etc/nginx
+      - ./nginx/etc/resolv.conf:/etc/resolv.conf
+      - ./nginx/etc/hosts:/etc/hosts
       - /opt/cache/:/opt/cache/
-      - ./nginx/temporary:/temporary
     ports:
       - "80:80"
       - "443:443"
