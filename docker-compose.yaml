@@ -1,10 +1,13 @@
-version: '2'
-nginx:
-  image: nginx:latest
-  # volumes:
-    # - ./nginx:/usr/share/nginx/html
-    # - ./nginx:/
-  ports:
-    - "80:80"
-    - "443:443"
-  restart: always
+version: '3.8'
+services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    container_name: nginx
+    # volumes:
+      # - ./nginx:/usr/share/nginx/html
+      # - ./nginx:/
+    ports:
+      - "80:80"
+      - "443:443"
+      
