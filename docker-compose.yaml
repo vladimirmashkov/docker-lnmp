@@ -9,6 +9,7 @@ services:
       # - ./nginx:/temporary
       - ./nginx:/etc/nginx
       - /etc/resolv.conf:/etc/resolv.conf
+      - /etc/hosts:/etc/hosts
       - /opt/cache/:/opt/cache/
     ports:
       - "80:80"
