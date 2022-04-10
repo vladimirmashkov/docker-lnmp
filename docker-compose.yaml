@@ -6,6 +6,8 @@ services:
     container_name: nginx
     volumes:
       - ./nginx/etc/nginx:/etc/nginx
+      - ./nginx/ssl:/usr/nginx/ssl
+      - ./nginx/www:/usr/nginx/www
       - ./nginx/etc/resolv.conf:/etc/resolv.conf
       - ./nginx/etc/hosts:/etc/hosts
       - /opt/cache/:/opt/cache/
