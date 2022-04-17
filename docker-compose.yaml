@@ -24,7 +24,7 @@ services:
       - TZ=Europe/Moscow
     ports:
       - "3306:3306"
-    volumes:
+    # volumes:
     # NOTE: your data will be stored in ./mysql
-      - ./mysql/etc/mysql:/etc/mysql
-      - ./mysql/var/lib/mysql:/var/lib/mysql
+      # - ./mysql/etc/mysql:/etc/mysql
+      # - ./mysql/var/lib/mysql:/var/lib/mysql
