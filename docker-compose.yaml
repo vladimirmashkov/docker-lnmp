@@ -26,6 +26,6 @@ services:
       - "3306:3306"
     volumes:
     # NOTE: your data will be stored in ./mysql
-      - .mysql:/temporary
-      # - ./mysql/etc/mysql:/etc/mysql
-      # - ./mysql/var/lib/mysql:/var/lib/mysql
+      # - ./mysql:/temporary
+      - ./mysql/etc/mysql:/etc/mysql
+      - ./mysql/var/lib/mysql:/var/lib/mysql
