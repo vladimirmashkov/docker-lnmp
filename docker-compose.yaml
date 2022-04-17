@@ -27,5 +27,7 @@ services:
     volumes:
     # NOTE: your data will be stored in ./mysql
       # - ./mysql:/temporary
-      - ./mysql/etc/mysql:/etc/mysql
-      - ./mysql/var/lib/mysql:/var/lib/mysql
+      # - ./mysql/etc/mysql:/etc/mysql
+      # - ./mysql/var/lib/mysql:/var/lib/mysql
+      # - ./mysql/etc/mysql/my.cnf:/etc/mysql/my.cnf
+      # - ./mysql/var/lib/mysql:/var/lib/mysql
