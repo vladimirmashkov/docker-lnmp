@@ -1,6 +1,17 @@
 # docker-lnmp
 
 ```shell
+docker-compose down
+rm -f docker-compose.yaml
+
+yum install -y git
+git clone https://github.com/vladimirmashkov/docker-lnmp.git
+cd docker-lnmp/
+git checkout origin/main
+git checkout main
+```
+
+```shell
 git fetch --all && git reset --hard origin/main && docker-compose up -d
 
 docker-compose down && git fetch --all && git reset --hard origin/main && docker-compose up -d
