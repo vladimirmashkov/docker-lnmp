@@ -12,7 +12,7 @@ git checkout main
 ```
 
 ```shell
-useradd ip_checker
+useradd -m ip_checker
 # usermod -aG docker ip_checker
 mkdir -p -m 0644 /home/ip_checker/.ssh/
 chmod 700 /home/ip_checker/.ssh/
