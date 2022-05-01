@@ -11,6 +11,7 @@ read -t 1
 rm -f *.yaml
 rm -f *.sh
 
+
 yum install -y git
 git clone https://github.com/vladimirmashkov/docker-lnmp.git
 cd docker-lnmp/
