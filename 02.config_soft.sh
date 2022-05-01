@@ -1,8 +1,8 @@
 #!/bin/bash
-read -t 1 -p "========== disable firewalld =========="
-echo
-systemctl disable firewalld
-systemctl stop firewalld
+# read -t 1 -p "========== disable firewalld =========="
+# echo
+# systemctl disable firewalld
+# systemctl stop firewalld
 
 read -t 1 -p "========== enable iptables =========="
 echo
@@ -27,10 +27,10 @@ sed -i 's/TCP_IN = "20,21,22,25,53,80,110,143,443,465,587,993,995"/TCP_IN = "20,
 sed -i 's/TCP_OUT = "20,21,22,25,53,80,110,113,443,587,993,995"/TCP_OUT = "20,21,22,25,53,80,110,113,443,587,593,993,995,3306"/g' /etc/csf/csf.conf
 sed -i 's/UDP_OUT = "20,21,53,113,123"/UDP_OUT = "20,21,53,113,123,3360"/g' /etc/csf/csf.conf
 
-read -t 1 -p "========== enable csf =========="
-echo
-systemctl enable csf
-systemctl start csf
+# read -t 1 -p "========== enable csf =========="
+# echo
+# systemctl enable csf
+# systemctl start csf
 
 
 read -t 1 -p "========== extract database ip_checker.tar.gz =========="

@@ -16,3 +16,6 @@ cat etc/ip_checker.pub > /home/ip_checker/.ssh/authorized_keys
 chmod 600 /home/ip_checker/.ssh/authorized_keys
 chown ip_checker:ip_checker /home/ip_checker/.ssh/ -R
 echo "ip_checker" | passwd ip_checker --stdin
+
+
+sed -i "s/PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config

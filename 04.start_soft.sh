@@ -3,10 +3,10 @@ read -t 1 -p "========== update repo =========="
 echo
 yum update -y && yum upgrade -y
 
-read -t 1 -p "========== restart csf =========="
-echo
-csf -r > /dev/null
-sysctl -p
+# read -t 1 -p "========== restart csf =========="
+# echo
+# csf -r > /dev/null
+# sysctl -p
 
 read -t 1 -p "========== docker stop =========="
 echo
@@ -23,9 +23,9 @@ systemctl restart docker
 
 docker-compose up -d
 
-read -t 1 -p "========== restart csf =========="
-echo
-csf -r > /dev/null
+# read -t 1 -p "========== restart csf =========="
+# echo
+# csf -r > /dev/null
 
 echo "========== To show a status =========="
 echo
