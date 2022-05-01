@@ -23,5 +23,5 @@ sed -i 's/TCP_IN = "20,21,22,25,53,80,110,143,443,465,587,993,995"/TCP_IN = "20,
 sed -i 's/TCP_OUT = "20,21,22,25,53,80,110,113,443,587,993,995"/TCP_OUT = "20,21,22,25,53,80,110,113,443,587,593,993,995"/g' /etc/csf/csf.conf
 
 read -t 1 -p "========== extract database ip_checker.tar.gz =========="
-tar -xzf ip_checker.tar.gz
+tar -xzf /root/ip_checker.tar.gz
 
