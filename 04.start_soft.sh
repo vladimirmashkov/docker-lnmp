@@ -5,7 +5,7 @@ yum update -y && yum upgrade -y
 
 read -t 1 -p "========== restart csf =========="
 echo
-csf -r
+csf -r > /dev/null
 sysctl -p
 
 read -t 1 -p "========== docker stop =========="
@@ -21,10 +21,11 @@ read -t 3 -p "========== docker restart =========="
 echo
 systemctl restart docker
 
-systemctl enable docker-compose-ocserv
-systemctl start docker-compose-ocserv
-
 docker-compose up -d
+
+read -t 1 -p "========== restart csf =========="
+echo
+csf -r > /dev/null
 
 echo "========== To show a status =========="
 echo
@@ -32,3 +33,5 @@ systemctl status iptables
 systemctl status ip6tables
 systemctl status csf
 systemctl status docker
+
+
