@@ -18,6 +18,7 @@ git checkout origin/main
 git checkout main
 chmod 755 *.sh
 sh main.sh
+echo
 ```
 
 
