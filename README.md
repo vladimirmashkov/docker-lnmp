@@ -1,6 +1,11 @@
 # docker-lnmp
 
 ```shell
+sudo su
+read -t 1
+cd /root
+read -t 1
+
 docker-compose down
 rm -f docker-compose.yaml
 
